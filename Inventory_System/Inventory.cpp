@@ -1,5 +1,5 @@
 /*	TODO
-	- remove item
+	+ remove item
 	- more items
 	- changing costs
 	- read item list from file
@@ -67,7 +67,10 @@ void Inventory::addItem(int inpID, int inpCount) {
 
 }
 
+// function to show the inventory contents onto the screen
 void Inventory::showInv() {
+
+	std::cout << "+--------------------+" << std::endl;
 
 	// loop through the inventory loop and list the name and count of the items
 	for (int i = 0; i < _inv.size(); i++) {
@@ -75,6 +78,30 @@ void Inventory::showInv() {
 		std::cout << _inv[i]._item.name << " : " << _inv[i]._count << std::endl;
 	}
 
+	std::cout << "+--------------------+" << std::endl;
+
+	return;
+
+}
+
+// function to remove an item based on ID
+void Inventory::remove(int ID, int Count) {
+
+	// loop through the inventory vector to search for the item to remove
+	for (int i = 0; i < _inv.size(); i++) {
+		if (_inv.at(i)._item.ID == ID) {		// if the item ID matches
+			if (_inv.at(i)._count <= Count) {	// if more items are being removed than exist
+				_inv.erase(_inv.begin()+i);		// erase the item from the inventory
+			}
+			else {
+				_inv.at(i)._count -= Count;		// minus the count from the vector
+			}
+			return;								// break out of the loop if an item was removed
+		}
+	}
+
+	// print an error message if the loop doesn't find a match
+	std::cout << "ITEM FAILED TO REMOVE" << std::endl;
 	return;
 
 }

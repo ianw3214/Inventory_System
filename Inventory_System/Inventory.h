@@ -24,6 +24,7 @@ public:
 	Inventory(int);					// empty constructor
 	void addItem(int, int);			// function to add an item (ID, Count)
 	void showInv();					// function to show the contents of the inventory
+	void remove(int, int);
 
 private:
 	std::vector<invType> _inv;		// inventory vector

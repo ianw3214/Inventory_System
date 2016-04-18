@@ -22,6 +22,12 @@ int main(int argc, char* argv[]) {
 
 	inv.showInv();
 
+	inv.remove(1, 3);
+	inv.remove(2, 4);
+	inv.remove(3, 4);
+
+	inv.showInv();
+
 	system("PAUSE");
 	return 0;
 
