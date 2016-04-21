@@ -21,13 +21,17 @@ struct invType {
 class Inventory {
 
 public:
-	Inventory(int);					// empty constructor
+	Inventory(int);					// constructor with inventory size
 	void addItem(int, int);			// function to add an item (ID, Count)
 	void showInv();					// function to show the contents of the inventory
-	void remove(int, int);
+	void remove(int, int);			// function to remove items from the inventory
+	void showItems();				// function to show all the items 
 
 private:
 	std::vector<invType> _inv;		// inventory vector
 	std::vector<item> itemList;		// list of items 
 	int iSize;						// size of the inventory
+
+	void initIDs();					// function to initialize the ID of items
 };
+

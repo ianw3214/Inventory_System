@@ -10,11 +10,8 @@
 // constructor
 Inventory::Inventory(int size) {
 
-	// initialize the item list
-	itemList.push_back({0, "NOTHING", 0});		// 0 - NOTHING
-	itemList.push_back({1, "WOOD" , 1});		// 1 - WOOD
-	itemList.push_back({ 2, "STONE" , 1 });		// 2 - STONE
-	itemList.push_back({ 3, "GRAVEL" , 1 });	// 3 - GRAVEL
+	// call the function to initialize the item names and IDs
+	initIDs();
 
 	// set the default size to 10
 	if (size == 0) {
@@ -75,7 +72,7 @@ void Inventory::showInv() {
 	// loop through the inventory loop and list the name and count of the items
 	for (int i = 0; i < _inv.size(); i++) {
 		// output the information of the current item to the user
-		std::cout << _inv[i]._item.name << " : " << _inv[i]._count << std::endl;
+		std::cout << "ID: " << _inv[i]._item.ID << " - " <<  _inv[i]._item.name << " : " << _inv[i]._count << std::endl;
 	}
 
 	std::cout << "+--------------------+" << std::endl;
@@ -104,4 +101,32 @@ void Inventory::remove(int ID, int Count) {
 	std::cout << "ITEM FAILED TO REMOVE" << std::endl;
 	return;
 
+}
+
+// function to show all the items that are in the system
+void Inventory::showItems() {
+
+	std::cout << "+--------------------+" << std::endl;
+
+	// loop through the items loop and list the name and count of the items
+	for (int i = 0; i < itemList.size(); i++) {
+		// output the information of the current item to the user
+		std::cout << "ID: " << itemList[i].ID << " - " << itemList[i].name << std::endl;
+	}
+
+	std::cout << "+--------------------+" << std::endl;
+
+	return;
+}
+
+// function to initialize the IDs of all the items
+void Inventory::initIDs() {
+
+	// initialize the item list
+	itemList.push_back({ 0, "NOTHING", 0 });	// 0 - NOTHING
+	itemList.push_back({ 1, "WOOD" , 1 });		// 1 - WOOD
+	itemList.push_back({ 2, "STONE" , 1 });		// 2 - STONE
+	itemList.push_back({ 3, "GRAVEL" , 1 });	// 3 - GRAVEL
+
+	return;
 }
