@@ -1,8 +1,6 @@
 /*	TODO
 	+ remove item
 	- more items
-	- changing costs
-	- read item list from file
 */
 
 #include "Inventory.h"
@@ -127,6 +125,11 @@ void Inventory::initIDs() {
 	itemList.push_back({ 1, "WOOD" , 1 });		// 1 - WOOD
 	itemList.push_back({ 2, "STONE" , 1 });		// 2 - STONE
 	itemList.push_back({ 3, "GRAVEL" , 1 });	// 3 - GRAVEL
+	itemList.push_back({ 4, "IRON", 3 });		// 4 - IRON
+	itemList.push_back({ 5, "GOLD", 4 });		// 5 - GOLD
+	itemList.push_back({ 6, "PLATINUM", 5 });	// 6 - PLATINUM
+	itemList.push_back({ 7, "COPPER", 4 });		// 7 - COPPER
+	itemList.push_back({ 8, "BRICK", 3});		// 8 - BRICK
 
 	return;
 }

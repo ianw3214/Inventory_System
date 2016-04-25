@@ -1,9 +1,7 @@
 /*	Inventory System Program
 
 	TODO
-	- user input
-	- shop system
-	- crafting system? (maybe)
+	+ user input
 */
 
 #include <iostream>
