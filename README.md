@@ -2,12 +2,15 @@
 
 Inventory System Created in C++
 
-So far features include:
+Features include:
 - Built in item list
 - Add items to inventory
 - Show items in inventory
 
+This project is done for now, it was mainly built for programming experience and not for polish.
 
-TODO list:
-- remove items from inventory
-- shop feature to buy items from
+Future TODOs:
+
+- shop system
+- crafting system
+- cost rates
