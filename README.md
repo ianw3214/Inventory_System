@@ -6,10 +6,9 @@
 
 ###Features:
 
-<<<<<<< HEAD
-=======
+
 Features include:
->>>>>>> origin/master
+
 - Built in item list
 - Add items to inventory
 - Show items in inventory
@@ -106,17 +105,7 @@ void Inventory::initIDs() {
 }
 ```
 
-<<<<<<< HEAD
 ---
 
 Creator: *Ian Wang*
 Created: *May 29th 2016*
-=======
-This project is done for now, it was mainly built for programming experience and not for polish.
-
-Future TODOs:
-
-- shop system
-- crafting system
-- cost rates
->>>>>>> origin/master
