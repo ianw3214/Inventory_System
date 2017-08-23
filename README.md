@@ -1,10 +1,10 @@
 # Inventory_System
 
-##Inventory System Created in C++
+## Inventory System Created in C++
 
 ---
 
-###Features:
+### Features:
 
 
 Features include:
@@ -16,14 +16,14 @@ Features include:
 
 ---
 
-###TODOs:
+### TODOs:
 
 - custom items read from text files
 - unique items that can't stack
 
 ---
 
-###Usage:
+### Usage:
 
 Using [gitzip](http://kinolien.github.io/gitzip/), type in *https://github.com/ianw3214/Inventory_System/tree/master/include* and press download to get the necessary files.
 Extract the zip and put the **Inventory.cpp** and **Inventory.h** files into your project folder. 
@@ -70,7 +70,7 @@ int main(){
 
 ---
 
-###Customization:
+### Customization:
 
 To change the way the properties of items stored, change the item struct in **Inventory.h**.
 
